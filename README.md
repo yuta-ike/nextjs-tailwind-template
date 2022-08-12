@@ -1,3 +1,6 @@
+# nextjs-tailwind-template
+TypeScript / React / Next.js / tailwind.css を利用する場合のテンプレートです。OGPや外部リンクなど、個人的によく使うコンポーネントをデフォルトで入れています。
+
 ## 開発
 
 ### フロント
