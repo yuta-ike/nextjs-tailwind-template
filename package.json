@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --ignore-path .eslintignore --dir",
+    "lint": "next lint --ignore-path .eslintignore",
     "lint:fix": "yarn lint --fix",
     "format": "prettier --ignore-path .prettierignore --check",
     "format:fix": "yarn format --write",
@@ -45,8 +45,7 @@
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
-      "yarn lint",
-      "yarn format"
+      "yarn format:fix"
     ]
   },
   "volta": {
