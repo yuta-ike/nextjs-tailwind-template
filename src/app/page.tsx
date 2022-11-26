@@ -1,4 +1,4 @@
-import "../styles/globals.css"
+import "@/app/global.css"
 
 import type { NextPage } from "next"
 
