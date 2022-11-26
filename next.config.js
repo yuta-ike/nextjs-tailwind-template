@@ -12,6 +12,7 @@ const nextConfig = {
   },
   experimental: {
     scrollRestoration: true,
+    appDir: true,
   },
 }
 

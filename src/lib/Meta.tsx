@@ -1,4 +1,3 @@
-import Head from "next/head"
 import React from "react"
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL!
@@ -30,9 +29,9 @@ const Meta: React.FC<MetaProps> = ({
 }) => {
   const title = `${_title}｜${serviceName}`
   return (
-    <Head>
+    <>
       <title>{title}</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover" />
+      <link rel="icon" href="/favicon.ico" />
       {canonical != null && <link rel="canonical" href={APP_URL + canonical} />}
       <meta name="description" content={description} />
       {!disableOgp && (
@@ -50,7 +49,10 @@ const Meta: React.FC<MetaProps> = ({
         </>
       )}
       {disableIndex && <meta name="robots" content="noindex, nofollow" />}
-    </Head>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover" />
+      <meta charSet="utf-8" />
+      <meta name="theme-color" content="#fafaf9" />
+    </>
   )
 }
 
