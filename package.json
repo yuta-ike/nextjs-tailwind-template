@@ -45,7 +45,8 @@
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
-      "yarn format:fix"
+      "yarn format:fix",
+      "yarn lint:fix"
     ]
   },
   "volta": {
