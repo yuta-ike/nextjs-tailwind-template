@@ -1,5 +1,7 @@
 import Providers from "@/lib/providers"
 
+import "./global.css"
+
 type RootLayoutProps = {
   children: React.ReactNode
 }

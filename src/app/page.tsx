@@ -1,8 +1,4 @@
-import "@/app/global.css"
-
-import type { NextPage } from "next"
-
-const Index: NextPage = () => {
+const Index = () => {
   return (
     <main>
       <div className="m-4">
@@ -13,3 +9,18 @@ const Index: NextPage = () => {
 }
 
 export default Index
+
+export const metadata = {
+  title: "Awesome Service Name",
+  description: "This is awesome service.",
+  openGraph: {
+    title: "Awesome Service Name",
+    description: "This is awesome service.",
+    type: "website",
+    locale: "ja_JP",
+  },
+  appleWebApp: {
+    title: "Awesome Service Name",
+  },
+  themeColor: "#fafaf9",
+}
