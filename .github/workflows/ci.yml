@@ -29,4 +29,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Run lint and formatter
-        run: pnpm exec check
+        run: pnpm run check
