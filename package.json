@@ -47,7 +47,7 @@
     "typescript": "5.0.4"
   },
   "volta": {
-    "node": "20.1.0",
+    "node": "18.16.0",
     "yarn": "1.22.19"
   },
   "nextBundleAnalysis": {
