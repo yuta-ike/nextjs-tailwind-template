@@ -8,7 +8,9 @@ const buildPrettierCommand = (filenames) =>
     .map((f) => path.relative(process.cwd(), f))
     .join(" ")}`
 
+const tscCommand = () => "pnpm exec tsc --noEmit"
+
 module.exports = {
-  "*.{js,jsx,ts,tsx}": [buildEslintCommand, buildPrettierCommand],
+  "*.{js,jsx,ts,tsx}": [buildEslintCommand, buildPrettierCommand, tscCommand],
   "*.{js,jsx,ts,tsx,json}": [buildPrettierCommand],
 }
