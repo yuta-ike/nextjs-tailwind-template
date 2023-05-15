@@ -14,9 +14,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
-          cache: yarn
+          node-version: 18.x
+          cache: pnpm
       - name: install npm packages
-        run: yarn --check-files --non-interactive
+        run: pnpm install --frozen-lockfile
       - name: Run lint and formatter
-        run: yarn run check
+        run: pnpm exec check
