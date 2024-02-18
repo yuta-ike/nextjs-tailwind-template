@@ -6,6 +6,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    remotePatterns: [],
+  },
   compiler: {
     removeConsole:
       process.env.NODE_ENV === "development"
@@ -16,7 +19,6 @@ const nextConfig = {
   },
   experimental: {
     scrollRestoration: true,
-    appDir: true,
     typedRoutes: true,
   },
 }
