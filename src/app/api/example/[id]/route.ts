@@ -6,7 +6,7 @@ type GetContext = {
   }
 }
 
-export const GET = async (request: Request, { params }: GetContext) => {
+export const GET = (request: Request, { params }: GetContext) => {
   const id = params.id
   return NextResponse.json({ body: `Hello, ${id}!` })
 }

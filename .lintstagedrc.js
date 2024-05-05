@@ -1,16 +1,17 @@
 const path = require("path")
 
 const buildEslintCommand = (filenames) =>
-  `next lint --fix --file ${filenames.map((f) => path.relative(process.cwd(), f)).join(" --file ")}`
+  `eslint --fix --cache ${filenames.map((f) => path.relative(process.cwd(), f)).join(" ")}`
 
 const buildPrettierCommand = (filenames) =>
-  `prettier --write --ignore-path .prettierignore ${filenames
+  `prettier --write --cache --ignore-path .prettierignore ${filenames
     .map((f) => path.relative(process.cwd(), f))
     .join(" ")}`
 
-const tscCommand = () => "pnpm exec tsc --noEmit"
+const tscCommand = () => "tsc --noEmit"
 
 module.exports = {
-  "*.{js,jsx,ts,tsx}": [buildEslintCommand, buildPrettierCommand, tscCommand],
-  "*.{js,jsx,ts,tsx,json}": [buildPrettierCommand],
+  "*.{js,jsx,ts,tsx}": [buildEslintCommand, buildPrettierCommand],
+  "*.{ts,tsx}": [tscCommand],
+  "*.json": [buildPrettierCommand],
 }

@@ -1,4 +1,6 @@
-import OuterLink, { OuterLinkProps } from "./OuterLink"
+import OuterLink from "./OuterLink"
+
+import type { OuterLinkProps } from "./OuterLink"
 
 export type TwitterShareButtonProps = Omit<OuterLinkProps, "href"> & {
   text?: string

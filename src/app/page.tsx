@@ -1,3 +1,5 @@
+import type { Metadata, Viewport } from "next/types"
+
 const Index = () => {
   return (
     <main>
@@ -10,7 +12,7 @@ const Index = () => {
 
 export default Index
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Awesome Service Name",
   description: "This is awesome service.",
   openGraph: {
@@ -22,5 +24,8 @@ export const metadata = {
   appleWebApp: {
     title: "Awesome Service Name",
   },
+}
+
+export const viewport: Viewport = {
   themeColor: "#fafaf9",
 }

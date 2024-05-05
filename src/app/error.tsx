@@ -1,8 +1,9 @@
 "use client"
 
-import { NextPage } from "next"
 import Link from "next/link"
 import { useEffect } from "react"
+
+import type { NextPage } from "next"
 
 type ErrorPageProps = {
   error: Error

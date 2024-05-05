@@ -1,5 +1,6 @@
-import { NextPage } from "next"
 import Link from "next/link"
+
+import type { NextPage } from "next"
 
 const NotFount: NextPage = () => {
   return (
