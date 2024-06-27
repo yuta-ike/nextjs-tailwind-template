@@ -20,6 +20,7 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
     typedRoutes: true,
+    ppr: true,
   },
 }
 
